@@ -1,0 +1,70 @@
+var students = [
+  {
+    name: "Armando",
+    score: 8,
+    grade: 5,
+    age: 11,
+    address: "Rua do Joao de Barro, 13.",
+    math: 5,
+  },
+  {
+    name: "Tainá",
+    score: 10,
+    grade: 5,
+    age: 10,
+    address: "Servidão Guarapuvu, 234",
+    math: 10,
+  },
+  {
+    name: "Catarina",
+    score: 9,
+    grade: 5,
+    age: 11,
+    address: "Rua das Canelas, 1500",
+    math: 7.5,
+  },
+  {
+    name: "Francisco",
+    score: 7,
+    grade: 5,
+    age: 10,
+    address: "Rua das Onças, 67",
+    math: 9,
+  },
+  {
+    name: "Maria Flor",
+    score: 8,
+    grade: 5,
+    age: 11,
+    address: "Servidão das Gabirobas, 89",
+    math: 6,
+  },
+];
+
+console.log(students);
+
+var mathAverage =
+  (students[0].math +
+    students[1].math +
+    students[2].math +
+    students[3].math +
+    students[4].math) /
+  5;
+console.log("A media de notas de matemática da turma é " + mathAverage);
+
+console.log("NOTAS E SITUAÇÃO DOS ESTUDANTES:");
+students.forEach((child) => {
+  console.log("--------------------");
+  console.log(
+    "O(a) estudante " +
+      child.name +
+      " tirou nota " +
+      child.math +
+      " em matemática"
+  );
+  if (child.math >= 7) {
+    console.log("O(a) estudante " + child.name + " esta aprovado(a)!");
+  } else {
+    console.log("O(a) estudante " + child.name + " esta reprovado(a)!");
+  }
+});
